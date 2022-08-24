@@ -19,7 +19,6 @@ def crawl_data():
     create_reviews_df("csvs\\zap_products_reviews_urls.csv","csvs\\products_reviews.csv")
 
 if __name__ == '__main__':
-    np.random.seed(42)
     #crawl_data()
     df = pd.read_csv("csvs/products_reviews.csv")
     df["label"] = df['Rate'].apply(quantize_rank)
